@@ -20,6 +20,11 @@ Undo one: `adb -s 192.168.1.30:5555 shell pm enable <package>`
 - `com.android.printspooler` off. Undo: `adb -s 192.168.1.30:5555 shell pm enable com.android.printspooler`
 - `com.google.android.tvlauncher` off (by install.sh). Undo: `sh undo.sh 192.168.1.30` (also removes the new home screen), or `adb -s 192.168.1.30:5555 shell pm enable com.google.android.tvlauncher`
 - `com.mitv.tvhome.atv` (PatchWall) off. Undo: `adb -s 192.168.1.30:5555 shell pm enable com.mitv.tvhome.atv`
+- `com.mitv.dream` (Mi Dream screensaver) off. Undo: `adb -s 192.168.1.30:5555 shell pm enable com.mitv.dream`
+
+## Settings changed
+
+- Screensaver: Mi Dream → Google Backdrop. Undo: `adb -s 192.168.1.30:5555 shell settings put secure screensaver_components com.mitv.dream/com.mitv.dream.MiDream` (turn Mi Dream back on first)
 
 ## Installed
 
